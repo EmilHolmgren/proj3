@@ -2,11 +2,14 @@ package proj3;
 
 public class PricingStratTest {
     public static void main(String[] args) {
-        BasicPricing bp = new BasicPricing(100, 1000);
+
+        int tickets = 10;
+        int customers = 1000;
+
+        BasicPricing bp = new BasicPricing(tickets, customers);
         
-        OptimalPricing op = new OptimalPricing(100, 1000);
-        runExp(1000,100,bp);
-        System.out.println("exp:" +op.getRev(100, 1000));
+        OptimalPricing op = new OptimalPricing(tickets, customers);
+        runExp(customers,tickets,bp);
     }
 
     public static void runExp(int customers, int tickets, Pricer priceStrat){
